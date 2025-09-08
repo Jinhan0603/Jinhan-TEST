@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DORO 중학생 정기 구독 서비스</title>
+  <!-- Google Fonts for clean Korean typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & base styles */
+    body {
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    /* Header styling */
+    header {
+      background: #1f4ba5; /* Primary brand color: deep blue */
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    header p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+    /* Navigation bar */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px 20px;
+      background: #163981; /* Slightly darker for distinction */
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    /* Generic section */
+    .section {
+      padding: 60px 20px;
+    }
+    /* Alternating backgrounds for sections */
+    .section:nth-child(even) {
+      background: #f5f7fb;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #163981;
+      font-weight: 700;
+    }
+    /* Flex containers for cards */
+    .features,
+    .pricing {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    /* Feature cards */
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      padding: 30px;
+      flex: 1 1 280px;
+      max-width: 350px;
+    }
+    .feature-card h3 {
+      margin-top: 0;
+      color: #1f4ba5;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    /* Pricing cards */
+    .pricing-card {
+      background: #fff;
+      border: 1px solid #e0e7ff;
+      border-radius: 8px;
+      padding: 40px;
+      flex: 1 1 300px;
+      max-width: 320px;
+      text-align: center;
+    }
+    .pricing-card h3 {
+      margin-top: 0;
+      color: #163981;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .pricing-card .price {
+      font-size: 2.5rem;
+      color: #1f4ba5;
+      margin: 20px 0;
+      font-weight: 700;
+    }
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      text-align: left;
+    }
+    .pricing-card li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 22px;
+    }
+    .pricing-card li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #1f4ba5;
+      font-size: 1rem;
+    }
+    /* CTA button */
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #1f4ba5;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .cta-button:hover {
+      background: #163981;
+    }
+    /* Footer styling */
+    footer {
+      background: #1f4ba5;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+    footer p {
+      margin: 5px 0;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .features,
+      .pricing {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>중학생 AI·로봇 정기 구독 서비스</h1>
+    <p>대학생 멘토와 함께하는 미래기술 도전, 지금 시작하세요.</p>
+  </header>
+  <nav>
+    <a href="#about">서비스 소개</a>
+    <a href="#benefits">혜택</a>
+    <a href="#fields">학습 분야</a>
+    <a href="#pricing">구독 안내</a>
+  </nav>
+  <!-- About section -->
+  <section id="about" class="section">
+    <h2>서비스 소개</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>월 2~3개 클래스 무제한 수강</h3>
+        <p>매월 AI, 로봇, 코딩, 디지털 트윈, 메타버스 등 다양한 주제의 소규모 클래스를 새롭게 개설하여 구독자에게 무제한으로 제공합니다.</p>
+      </div>
+      <div class="feature-card">
+        <h3>도전형 대회 준비반</h3>
+        <p>해외·국내 대회에 도전할 수 있도록 대학생 공대생 멘토가 지도하는 챌린지 클래스를 운영하며, 실제 대회 참가까지 지원합니다.</p>
+      </div>
+      <div class="feature-card">
+        <h3>대학생 멘토링</h3>
+        <p>관련 전공 대학생 멘토가 팀 프로젝트를 밀착 지도하여 학습과 프로젝트 수행 능력을 함께 길러줍니다.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Benefits section -->
+  <section id="benefits" class="section">
+    <h2>구독 혜택</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>성장 중심 커리큘럼</h3>
+        <p>중학생 눈높이에 맞춘 체계적인 커리큘럼으로 기본부터 응용까지 단계적으로 실력을 향상시킵니다.</p>
+      </div>
+      <div class="feature-card">
+        <h3>포트폴리오 구축</h3>
+        <p>각 수업과 대회 도전을 통해 산출물을 제작하며, 학교 생활기록부나 입시 포트폴리오로 활용할 수 있습니다.</p>
+      </div>
+      <div class="feature-card">
+        <h3>경제적인 비용</h3>
+        <p>개별 수업 및 대회 참가 비용을 따로 결제하는 것보다 저렴한 구독료로 월정액 혜택을 누릴 수 있습니다.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Fields section -->
+  <section id="fields" class="section">
+    <h2>학습 분야</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>인공지능</h3>
+        <p>머신러닝, 딥러닝, 강화학습 등 AI 기술을 실습하고 AWS DeepRacer 등 자율주행 프로젝트에 도전합니다.</p>
+      </div>
+      <div class="feature-card">
+        <h3>로봇공학</h3>
+        <p>센서와 모터를 활용한 로봇 제작, 로봇제어와 프로그래밍을 학습하며 FLL, RoboCup과 같은 대회를 준비합니다.</p>
+      </div>
+      <div class="feature-card">
+        <h3>코딩</h3>
+        <p>Python, JavaScript 등 프로그래밍 언어를 배우고 앱 개발, 데이터 과학, 알고리즘 문제 해결을 실습합니다.</p>
+      </div>
+      <div class="feature-card">
+        <h3>디지털 트윈</h3>
+        <p>3D 모델링과 시뮬레이션 기술로 산업 현장과 도시를 가상 공간에 재현하며 미래를 설계합니다.</p>
+      </div>
+      <div class="feature-card">
+        <h3>메타버스</h3>
+        <p>Unity나 Unreal 등을 활용해 가상세계를 구축하고 메타버스 콘텐츠를 제작하여 새로운 창작의 장을 엽니다.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Pricing section -->
+  <section id="pricing" class="section">
+    <h2>구독 안내</h2>
+    <div class="pricing">
+      <div class="pricing-card">
+        <h3>월 구독</h3>
+        <div class="price">₩149,000</div>
+        <ul>
+          <li>월 2~3개 신규 클래스 무제한 수강</li>
+          <li>대회 준비반 우선 참가권</li>
+          <li>대학생 멘토링 Q&A</li>
+          <li>포트폴리오 인증서 제공</li>
+        </ul>
+        <a href="https://doroedu.net/subscribe" class="cta-button">지금 신청하기</a>
+      </div>
+      <div class="pricing-card">
+        <h3>연간 구독</h3>
+        <div class="price">₩1,610,000</div>
+        <ul>
+          <li>월 구독 혜택 모두 포함</li>
+          <li>약 10% 할인 혜택</li>
+          <li>형제 할인 및 이벤트 우선 참여</li>
+          <li>1년 간 안정적인 학습 지원</li>
+        </ul>
+        <a href="https://doroedu.net/subscribe" class="cta-button">연간 구독 신청</a>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <p>© 주식회사 도로 | AI·로봇 교육 전문 에듀테크 기업</p>
+    <p>경기도 안산시 상록구 한양대학로 55 창업보육센터 613호</p>
+  </footer>
+</body>
+</html>
